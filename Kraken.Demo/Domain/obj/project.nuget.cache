@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "HFzomrMdsY5Bo/YokrWwGlDRrhFAhQN2Iyfr8Owa9WfYJmMfYq8L/hgjnpg3H52iGn3vmQ2uNPgGAS+46yUHhw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\vijayaa\\source\\repos\\Asp.netCore_React\\Kraken.Demo\\Domain\\Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\vijayaa\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\vijayaa\\.nuget\\packages\\system.componentmodel.annotations\\4.7.0\\system.componentmodel.annotations.4.7.0.nupkg.sha512"
+  ],
+  "logs": []
+}

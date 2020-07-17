@@ -1,0 +1,16 @@
+<div class="card mt-4">
+  <h4 class="card-header">Kraken Vitals</h4>
+  <div class="card-body">
+    <div *ngIf="loading" class="spinner-border spinner-border-sm"></div>
+    <table class="table">
+      <tbody *ngFor="let i of vitasllist | async">
+        <tr>
+          <td>{{ i.businessUnitId }}</td>
+          <td>{{ i.deviceId }}</td>
+          <td>{{ i.temperature }}</td>
+          <td>{{ i.heartRate }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

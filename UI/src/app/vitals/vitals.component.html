@@ -1,0 +1,79 @@
+<div class="col-md-6 offset-md-3 mt-5">
+  <div class="card">
+    <h4 class="card-header">Kraken Heart Beat App</h4>
+    <div class="card-body">
+      <form [formGroup]="vitalForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="businessUnitId">businessUnitId</label>
+          <input
+            type="text"
+            formControlName="businessUnitId"
+            class="form-control"
+            [ngClass]="{ 'is-invalid': submitted && f.businessUnitId.errors }"
+          />
+          <div
+            *ngIf="submitted && f.businessUnitId.errors"
+            class="invalid-feedback"
+          >
+            <div *ngIf="f.businessUnitId.errors.required">
+              businessUnitId is required
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="deviceId">deviceId</label>
+          <input
+            type="text"
+            formControlName="deviceId"
+            class="form-control"
+            [ngClass]="{ 'is-invalid': submitted && f.deviceId.errors }"
+          />
+          <div *ngIf="submitted && f.deviceId.errors" class="invalid-feedback">
+            <div *ngIf="f.deviceId.errors.required">deviceId is required</div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="heartRate">heartRate</label>
+          <input
+            type="text"
+            formControlName="heartRate"
+            class="form-control"
+            [ngClass]="{ 'is-invalid': submitted && f.heartRate.errors }"
+          />
+          <div *ngIf="submitted && f.heartRate.errors" class="invalid-feedback">
+            <div *ngIf="f.heartRate.errors.required">heartRate is required</div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="temperature">temperature</label>
+          <input
+            type="text"
+            formControlName="temperature"
+            class="form-control"
+            [ngClass]="{ 'is-invalid': submitted && f.temperature.errors }"
+          />
+          <div
+            *ngIf="submitted && f.temperature.errors"
+            class="invalid-feedback"
+          >
+            <div *ngIf="f.temperature.errors.required">
+              temperature is required
+            </div>
+          </div>
+        </div>
+        <button [disabled]="loading" class="btn btn-primary">
+          <span
+            *ngIf="loading"
+            class="spinner-border spinner-border-sm mr-1"
+          ></span>
+          Save
+        </button>
+        &nbsp; &nbsp;
+
+        <div *ngIf="error" class="alert alert-danger mt-3 mb-0">
+          {{ error }}
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
